@@ -8,14 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var lists: [ItemList] = []
+    @State private var inventory: [Item] = []
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView {
+            InventoryView(lists: $lists, inventory: $inventory)
+                .tabItem {
+                    Label("Inventory", systemImage: "archivebox")
+                }
+            
+            ListView(lists: $lists, inventory: $inventory)
+                .tabItem {
+                    Label("Lists", systemImage: "list.bullet")
+                }
         }
-        .padding()
     }
 }
 

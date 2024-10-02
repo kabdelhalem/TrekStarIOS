@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A3E2F7B92CADEB6B00E49023 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E2F7B82CADEB6B00E49023 /* Items.swift */; };
+		A3E2F7BC2CADEB8F00E49023 /* InventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E2F7BB2CADEB8F00E49023 /* InventoryView.swift */; };
+		A3E2F7BE2CADEBAA00E49023 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E2F7BD2CADEBAA00E49023 /* Categories.swift */; };
+		A3E2F7C02CADEBE900E49023 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E2F7BF2CADEBE900E49023 /* ListView.swift */; };
+		A3E2F7C22CADEC1300E49023 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E2F7C12CADEC1300E49023 /* AddItemView.swift */; };
+		A3E2F7C42CADF5E600E49023 /* CreateListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E2F7C32CADF5E600E49023 /* CreateListView.swift */; };
+		A3E2F7C62CADF62600E49023 /* MultipleSelectionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E2F7C52CADF62600E49023 /* MultipleSelectionRow.swift */; };
+		A3E2F7C82CADF92C00E49023 /* EditInventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E2F7C72CADF92C00E49023 /* EditInventoryView.swift */; };
+		A3E2F7CA2CADFD3200E49023 /* EditListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E2F7C92CADFD3200E49023 /* EditListView.swift */; };
 		A3E853492CA8655500BF59CB /* TrekStarIOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E853482CA8655500BF59CB /* TrekStarIOSApp.swift */; };
 		A3E8534B2CA8655500BF59CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E8534A2CA8655500BF59CB /* ContentView.swift */; };
 		A3E8534D2CA8655800BF59CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3E8534C2CA8655800BF59CB /* Assets.xcassets */; };
@@ -34,6 +43,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A3E2F7B82CADEB6B00E49023 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
+		A3E2F7BB2CADEB8F00E49023 /* InventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryView.swift; sourceTree = "<group>"; };
+		A3E2F7BD2CADEBAA00E49023 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		A3E2F7BF2CADEBE900E49023 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		A3E2F7C12CADEC1300E49023 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		A3E2F7C32CADF5E600E49023 /* CreateListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateListView.swift; sourceTree = "<group>"; };
+		A3E2F7C52CADF62600E49023 /* MultipleSelectionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleSelectionRow.swift; sourceTree = "<group>"; };
+		A3E2F7C72CADF92C00E49023 /* EditInventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInventoryView.swift; sourceTree = "<group>"; };
+		A3E2F7C92CADFD3200E49023 /* EditListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListView.swift; sourceTree = "<group>"; };
 		A3E853452CA8655500BF59CB /* TrekStarIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrekStarIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3E853482CA8655500BF59CB /* TrekStarIOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrekStarIOSApp.swift; sourceTree = "<group>"; };
 		A3E8534A2CA8655500BF59CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +89,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A3E2F7B72CADEB4C00E49023 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A3E2F7B82CADEB6B00E49023 /* Items.swift */,
+				A3E2F7BD2CADEBAA00E49023 /* Categories.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A3E2F7BA2CADEB7800E49023 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A3E2F7BB2CADEB8F00E49023 /* InventoryView.swift */,
+				A3E2F7BF2CADEBE900E49023 /* ListView.swift */,
+				A3E2F7C12CADEC1300E49023 /* AddItemView.swift */,
+				A3E2F7C32CADF5E600E49023 /* CreateListView.swift */,
+				A3E2F7C52CADF62600E49023 /* MultipleSelectionRow.swift */,
+				A3E2F7C72CADF92C00E49023 /* EditInventoryView.swift */,
+				A3E2F7C92CADFD3200E49023 /* EditListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A3E8533C2CA8655500BF59CB = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +135,8 @@
 		A3E853472CA8655500BF59CB /* TrekStarIOS */ = {
 			isa = PBXGroup;
 			children = (
+				A3E2F7BA2CADEB7800E49023 /* Views */,
+				A3E2F7B72CADEB4C00E49023 /* Models */,
 				A3E853482CA8655500BF59CB /* TrekStarIOSApp.swift */,
 				A3E8534A2CA8655500BF59CB /* ContentView.swift */,
 				A3E8534C2CA8655800BF59CB /* Assets.xcassets */,
@@ -215,6 +258,9 @@
 				Base,
 			);
 			mainGroup = A3E8533C2CA8655500BF59CB;
+			packageReferences = (
+				A3E853722CA868BF00BF59CB /* XCRemoteSwiftPackageReference "swiftui-drawer" */,
+			);
 			productRefGroup = A3E853462CA8655500BF59CB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,7 +303,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3E2F7BC2CADEB8F00E49023 /* InventoryView.swift in Sources */,
+				A3E2F7C62CADF62600E49023 /* MultipleSelectionRow.swift in Sources */,
+				A3E2F7BE2CADEBAA00E49023 /* Categories.swift in Sources */,
+				A3E2F7C82CADF92C00E49023 /* EditInventoryView.swift in Sources */,
+				A3E2F7C42CADF5E600E49023 /* CreateListView.swift in Sources */,
+				A3E2F7CA2CADFD3200E49023 /* EditListView.swift in Sources */,
+				A3E2F7C22CADEC1300E49023 /* AddItemView.swift in Sources */,
+				A3E2F7C02CADEBE900E49023 /* ListView.swift in Sources */,
 				A3E8534B2CA8655500BF59CB /* ContentView.swift in Sources */,
+				A3E2F7B92CADEB6B00E49023 /* Items.swift in Sources */,
 				A3E853492CA8655500BF59CB /* TrekStarIOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,6 +643,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A3E853722CA868BF00BF59CB /* XCRemoteSwiftPackageReference "swiftui-drawer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maustinstar/swiftui-drawer";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = A3E8533D2CA8655500BF59CB /* Project object */;
 }
