@@ -26,18 +26,16 @@ Installation
 
 To get started with TrekStar, follow these steps:
 
-	1.	Clone the repository:
+1. Clone the repository
+```git clone https://github.com/kabdelhalem/TrekStarIOS.git```
 
-git clone https://github.com/kabdelhalem/TrekStarIOS.git
-
-
-	2.	Open the project in Xcode:
-
+2. Open the Project in XCode
+```
 cd TrekStar
 open TrekStar.xcodeproj
+```
 
-
-	3.	Build and run the app:
+3. Build and run the app:
 Make sure your development environment is set up with Xcode and the latest iOS SDK. Choose a target device or simulator and run the app using the play button in Xcode.
 
 Requirements
