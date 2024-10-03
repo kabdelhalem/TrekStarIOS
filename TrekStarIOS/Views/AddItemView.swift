@@ -12,7 +12,7 @@ struct AddItemView: View {
     @Binding var inventory: [Item]
     
     @State private var name = ""
-    @State private var selectedCategory = Category.clothing.rawValue
+    @State private var selectedCategory: Category = .clothing
     @State private var weight = ""
     @Binding var selectedUnit: WeightUnit
     
@@ -22,32 +22,51 @@ struct AddItemView: View {
     
     var body: some View {
         Form {
-            TextField("Item Name", text: $name)
-            
-            Picker("Category", selection: $selectedCategory) {
-                ForEach(categories, id: \.self) { category in
-                    Text(category.rawValue).tag(category.rawValue)
-                }
+            Section(header: Text("Item Name")
+                        .foregroundColor(.lightGold)) {
+                TextField("Item Name", text: $name)
+                    .foregroundColor(.lightGold) // Set text field text color
             }
+            .listRowBackground(Color.darkGreen) // Set section background color
             
-            TextField("Weight (\(selectedUnit))", text: $weight)
-                .keyboardType(.decimalPad)
+            Section(header: Text("Category")
+                        .foregroundColor(.lightGold)) {
+                Picker("Category", selection: $selectedCategory) {
+                    ForEach(categories, id: \.self) { category in
+                        Text(category.rawValue)
+                            .foregroundColor(.forestGreen) // Customize picker text color
+                    }
+                }
+                .pickerStyle(WheelPickerStyle()) // You can change this style as needed
+            }
+            .listRowBackground(Color.darkGreen)
             
-            Button("Add Item") {
+            Section(header: Text("Weight (\(selectedUnit.rawValue))")
+                        .foregroundColor(.lightGold)) {
+                TextField("Weight", text: $weight)
+                    .keyboardType(.decimalPad)
+                    .foregroundColor(.lightGold) // Customize text field text color
+            }
+            .listRowBackground(Color.darkGreen)
+            
+            Button(action: {
                 if let weightValue = Double(weight) {
-                    let newItem = Item(name: name, category: selectedCategory, weight: weightValue)
+                    let newItem = Item(name: name, category: selectedCategory.rawValue, weight: weightValue)
                     inventory.append(newItem)
                     presentationMode.wrappedValue.dismiss()
                 }
+            }) {
+                Text("Add Item")
+                    .foregroundColor(.darkGreen)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.lightGold)
+                    .cornerRadius(8)
             }
+            .listRowBackground(Color.darkGreen)
         }
         .navigationTitle("Add New Item")
-        .toolbar {
-            ToolbarItem(placement: .cancellationAction) {
-                Button("Cancel") {
-                    presentationMode.wrappedValue.dismiss()
-                }
-            }
-        }
+        .background(Color.darkGreen)
+        .scrollContentBackground(.hidden)
     }
 }

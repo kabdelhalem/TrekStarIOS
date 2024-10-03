@@ -47,21 +47,27 @@ struct InventoryView: View {
                             deleteItems(at: indexSet, in: category)
                         })
                     }
+                    .listRowBackground(Color.forestGreen)
                 }
             }
+            .background(Color.darkGreen)
+            .scrollContentBackground(.hidden)
             .navigationTitle("Inventory")
+            .foregroundColor(.lightGold)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {
                         isPresentingSettings = true
                     }) {
                         Image(systemName: "gear")
+                            .foregroundColor(.lightGold)
                     }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Add Item") {
                         isPresentingAddItem = true
                     }
+                    .foregroundColor(.lightGold)
                 }
             }
             .sheet(isPresented: $isPresentingAddItem) {

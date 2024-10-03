@@ -10,10 +10,8 @@ import SwiftUI
 
 struct ListView: View {
     @Binding var lists: [ItemList]
-    @State private var isPresentingCreateList = false // State to present CreateListView
-
-    @Binding var inventory: [Item] // Bind the inventory to allow selecting items
-
+    @State private var isPresentingCreateList = false
+    @Binding var inventory: [Item]
     @State private var listToEdit: ItemList? = nil
     @Binding var selectedUnit: WeightUnit
     
@@ -22,40 +20,56 @@ struct ListView: View {
             List {
                 if lists.isEmpty {
                     Text("No lists created yet.")
+                        .foregroundColor(.lightGold)
                 } else {
                     ForEach(lists.indices, id: \.self) { index in
                         let list = lists[index]
                         Section(header: HStack {
                             Text(list.name)
+                                .foregroundColor(.lightGold)
                             Spacer()
                             Button("Edit") {
-                                listToEdit = list // Set the list to edit
+                                listToEdit = list
                             }
+                            .foregroundColor(.lightGold)
                         }) {
                             ForEach(list.items.indices, id: \.self) { itemIndex in
                                 let item = list.items[itemIndex]
-                                Text("\(item.name) - \(formattedWeight(item.weight))\(selectedUnit)")
+                                Text("\(item.name) - \(formattedWeight(item.weight)) \(selectedUnit.rawValue)")
+                                    .foregroundColor(.lightGold)
                             }
+                            .listRowBackground(Color.forestGreen)
+                            
+                            // Calculate and display total weight
                             let totalWeight = list.items.reduce(0.0) { $0 + selectedUnit.convert(weight: $1.weight, to: selectedUnit) }
-                            Section() {
-                                Text("Total Weight: \(String(format: "%.2f", totalWeight))\(selectedUnit.rawValue)")
+                            Section {
+                                Text("Total Weight: \(String(format: "%.2f", totalWeight)) \(selectedUnit.rawValue)")
+                                    .foregroundColor(.lightGold)
                             }
+                            .listRowBackground(Color.forestGreen)
                         }
+                        .listRowBackground(Color.darkGreen)
                     }
                 }
             }
+            .background(Color.darkGreen)
+            .scrollContentBackground(.hidden)
             .navigationTitle("My Lists")
+            .foregroundColor(.lightGold)
             .toolbar {
-                Button("Add List") {
-                    isPresentingCreateList = true
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Add List") {
+                        isPresentingCreateList = true
+                    }
+                    .foregroundColor(.lightGold)
                 }
             }
             .sheet(isPresented: $isPresentingCreateList) {
-                CreateListView(inventory: $inventory, lists: $lists) // Present CreateListView
+                CreateListView(inventory: $inventory, lists: $lists)
             }
             .sheet(item: $listToEdit) { list in
                 if let index = lists.firstIndex(where: { $0.id == list.id }) {
-                    EditListView(list: $lists[index], inventory: $inventory) // Pass the list as Binding
+                    EditListView(list: $lists[index], inventory: $inventory)
                 }
             }
         }

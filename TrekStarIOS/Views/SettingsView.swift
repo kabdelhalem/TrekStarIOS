@@ -9,21 +9,32 @@ import Foundation
 import SwiftUI
 
 struct SettingsView: View {
-    @Binding var selectedUnit: WeightUnit // Binding to the selected unit
+    @Binding var selectedUnit: WeightUnit
 
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("Weight Unit")) {
+                Section(header: Text("Weight Unit")
+                            .foregroundColor(.lightGold)
+                        ) {
                     Picker("Select Unit", selection: $selectedUnit) {
                         ForEach(WeightUnit.allCases, id: \.self) { unit in
-                            Text(unit.rawValue.capitalized).tag(unit)
+                            Text(unit.rawValue.capitalized)
+                                .foregroundColor(.forestGreen)
                         }
                     }
-                    .pickerStyle(SegmentedPickerStyle()) // Segmented control for unit selection
+                    .pickerStyle(SegmentedPickerStyle())
+                    .background(Color.darkGreen)
+                    .cornerRadius(8)
                 }
+                .listRowBackground(Color.darkGreen)
             }
+            .background(Color.darkGreen.edgesIgnoringSafeArea(.all))
             .navigationTitle("Settings")
+            .navigationBarTitleDisplayMode(.inline)
+            .foregroundColor(.lightGold)
         }
+        .background(Color.darkGreen)
+        .foregroundColor(.lightGold)
     }
 }

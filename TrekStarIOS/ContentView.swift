@@ -24,6 +24,11 @@ struct ContentView: View {
                     Label("Lists", systemImage: "list.bullet")
                 }
         }
+        .accentColor(Color.lightGold)
+        .onAppear {
+            UITabBar.appearance().barTintColor = UIColor(Color.darkGreen)
+            UITabBar.appearance().unselectedItemTintColor = UIColor(Color.forestGreen)
+        }
     }
 }
 

@@ -20,11 +20,15 @@ struct CreateListView: View {
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("List Name")) {
+                Section(header: Text("List Name")
+                            .foregroundColor(.lightGold)) {
                     TextField("Enter list name", text: $listName)
+                        .foregroundColor(.lightGold)
                 }
+                .listRowBackground(Color.darkGreen)
 
-                Section(header: Text("Select Items")) {
+                Section(header: Text("Select Items")
+                            .foregroundColor(.lightGold)) {
                     List {
                         ForEach(inventory.indices, id: \.self) { index in
                             let item = inventory[index]
@@ -35,27 +39,31 @@ struct CreateListView: View {
                                     selectedItems.append(item)
                                 }
                             }
+                            .listRowBackground(Color.forestGreen)
                         }
                     }
                 }
-            }
-            .navigationTitle("Create New List")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Cancel") {
+                .listRowBackground(Color.darkGreen)
+                Button(action: {
+                    if !listName.isEmpty {
+                        let newList = ItemList(name: listName, items: selectedItems)
+                        lists.append(newList)
                         presentationMode.wrappedValue.dismiss()
                     }
+                }) {
+                    Text("Create List")
+                        .foregroundColor(.darkGreen)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.lightGold)
+                        .cornerRadius(8)
                 }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Create") {
-                        if !listName.isEmpty {
-                            let newList = ItemList(name: listName, items: selectedItems)
-                            lists.append(newList)
-                            presentationMode.wrappedValue.dismiss()
-                        }
-                    }
-                }
+                .listRowBackground(Color.darkGreen)
             }
+            .background(Color.darkGreen)
+            .scrollContentBackground(.hidden)
+            .navigationTitle("Create New List")
+            .foregroundColor(.lightGold)
         }
     }
 }
