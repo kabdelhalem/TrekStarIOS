@@ -30,6 +30,7 @@ struct SettingsView: View {
                 .listRowBackground(Color.darkGreen)
             }
             .background(Color.darkGreen.edgesIgnoringSafeArea(.all))
+            .scrollContentBackground(.hidden)
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.inline)
             .foregroundColor(.lightGold)

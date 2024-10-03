@@ -21,6 +21,7 @@ struct ListView: View {
                 if lists.isEmpty {
                     Text("No lists created yet.")
                         .foregroundColor(.lightGold)
+                        .listRowBackground(Color.darkGreen)
                 } else {
                     ForEach(lists.indices, id: \.self) { index in
                         let list = lists[index]
@@ -40,7 +41,6 @@ struct ListView: View {
                             }
                             .listRowBackground(Color.forestGreen)
                             
-                            // Calculate and display total weight
                             let totalWeight = list.items.reduce(0.0) { $0 + selectedUnit.convert(weight: $1.weight, to: selectedUnit) }
                             Section {
                                 Text("Total Weight: \(String(format: "%.2f", totalWeight)) \(selectedUnit.rawValue)")
