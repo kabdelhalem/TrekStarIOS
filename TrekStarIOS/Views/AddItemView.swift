@@ -25,19 +25,19 @@ struct AddItemView: View {
             Section(header: Text("Item Name")
                         .foregroundColor(.lightGold)) {
                 TextField("Item Name", text: $name)
-                    .foregroundColor(.lightGold) // Set text field text color
+                    .foregroundColor(.lightGold)
             }
-            .listRowBackground(Color.darkGreen) // Set section background color
+            .listRowBackground(Color.darkGreen)
             
             Section(header: Text("Category")
                         .foregroundColor(.lightGold)) {
                 Picker("Category", selection: $selectedCategory) {
                     ForEach(categories, id: \.self) { category in
                         Text(category.rawValue)
-                            .foregroundColor(.forestGreen) // Customize picker text color
+                            .foregroundColor(.lightGold)
                     }
                 }
-                .pickerStyle(WheelPickerStyle()) // You can change this style as needed
+                .pickerStyle(WheelPickerStyle())
             }
             .listRowBackground(Color.darkGreen)
             
@@ -45,7 +45,7 @@ struct AddItemView: View {
                         .foregroundColor(.lightGold)) {
                 TextField("Weight", text: $weight)
                     .keyboardType(.decimalPad)
-                    .foregroundColor(.lightGold) // Customize text field text color
+                    .foregroundColor(.lightGold)
             }
             .listRowBackground(Color.darkGreen)
             
