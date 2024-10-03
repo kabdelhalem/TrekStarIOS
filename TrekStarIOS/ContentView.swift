@@ -10,10 +10,11 @@ import SwiftUI
 struct ContentView: View {
     @State private var lists: [ItemList] = []
     @State private var inventory: [Item] = []
+    @State private var selectedUnit: WeightUnit = .lb
     
     var body: some View {
         TabView {
-            InventoryView(lists: $lists, inventory: $inventory)
+            InventoryView(lists: $lists, inventory: $inventory, selectedUnit: $selectedUnit)
                 .tabItem {
                     Label("Inventory", systemImage: "archivebox")
                 }

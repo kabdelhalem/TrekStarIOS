@@ -16,6 +16,7 @@
 		A3E2F7C62CADF62600E49023 /* MultipleSelectionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E2F7C52CADF62600E49023 /* MultipleSelectionRow.swift */; };
 		A3E2F7C82CADF92C00E49023 /* EditInventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E2F7C72CADF92C00E49023 /* EditInventoryView.swift */; };
 		A3E2F7CA2CADFD3200E49023 /* EditListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E2F7C92CADFD3200E49023 /* EditListView.swift */; };
+		A3E2F7CC2CAEC3AE00E49023 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E2F7CB2CAEC3AE00E49023 /* SettingsView.swift */; };
 		A3E853492CA8655500BF59CB /* TrekStarIOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E853482CA8655500BF59CB /* TrekStarIOSApp.swift */; };
 		A3E8534B2CA8655500BF59CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E8534A2CA8655500BF59CB /* ContentView.swift */; };
 		A3E8534D2CA8655800BF59CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3E8534C2CA8655800BF59CB /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		A3E2F7C52CADF62600E49023 /* MultipleSelectionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleSelectionRow.swift; sourceTree = "<group>"; };
 		A3E2F7C72CADF92C00E49023 /* EditInventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInventoryView.swift; sourceTree = "<group>"; };
 		A3E2F7C92CADFD3200E49023 /* EditListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListView.swift; sourceTree = "<group>"; };
+		A3E2F7CB2CAEC3AE00E49023 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A3E853452CA8655500BF59CB /* TrekStarIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrekStarIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3E853482CA8655500BF59CB /* TrekStarIOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrekStarIOSApp.swift; sourceTree = "<group>"; };
 		A3E8534A2CA8655500BF59CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				A3E2F7C52CADF62600E49023 /* MultipleSelectionRow.swift */,
 				A3E2F7C72CADF92C00E49023 /* EditInventoryView.swift */,
 				A3E2F7C92CADFD3200E49023 /* EditListView.swift */,
+				A3E2F7CB2CAEC3AE00E49023 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				A3E2F7C22CADEC1300E49023 /* AddItemView.swift in Sources */,
 				A3E2F7C02CADEBE900E49023 /* ListView.swift in Sources */,
 				A3E8534B2CA8655500BF59CB /* ContentView.swift in Sources */,
+				A3E2F7CC2CAEC3AE00E49023 /* SettingsView.swift in Sources */,
 				A3E2F7B92CADEB6B00E49023 /* Items.swift in Sources */,
 				A3E853492CA8655500BF59CB /* TrekStarIOSApp.swift in Sources */,
 			);
@@ -489,7 +493,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kabdelhalem.TrekStarIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -518,7 +522,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kabdelhalem.TrekStarIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

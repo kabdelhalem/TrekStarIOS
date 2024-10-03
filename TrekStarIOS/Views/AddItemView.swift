@@ -14,6 +14,7 @@ struct AddItemView: View {
     @State private var name = ""
     @State private var selectedCategory = Category.clothing.rawValue
     @State private var weight = ""
+    @Binding var selectedUnit: WeightUnit
     
     var categories = Category.allCases
     
@@ -29,7 +30,7 @@ struct AddItemView: View {
                 }
             }
             
-            TextField("Weight (kg)", text: $weight)
+            TextField("Weight (\(selectedUnit))", text: $weight)
                 .keyboardType(.decimalPad)
             
             Button("Add Item") {

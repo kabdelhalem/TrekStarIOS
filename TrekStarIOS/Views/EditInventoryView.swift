@@ -11,6 +11,7 @@ import SwiftUI
 struct EditItemView: View {
     @Binding var item: Item
     @Binding var inventory: [Item] // To update the inventory with the changes
+    @Binding var selectedUnit: WeightUnit
 
     @Environment(\.presentationMode) var presentationMode
 
@@ -27,7 +28,7 @@ struct EditItemView: View {
                     }
                 }
 
-                TextField("Weight (kg)", value: $item.weight, formatter: NumberFormatter())
+                TextField("Weight (\(selectedUnit)", value: $item.weight, formatter: NumberFormatter())
                     .keyboardType(.decimalPad)
             }
             .navigationTitle("Edit Item")
