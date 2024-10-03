@@ -28,7 +28,7 @@ To get started with TrekStar, follow these steps:
 
 	1.	Clone the repository:
 
-git clone https://github.com/yourusername/TrekStar.git
+git clone https://github.com/kabdelhalem/TrekStarIOS.git
 
 
 	2.	Open the project in Xcode:
