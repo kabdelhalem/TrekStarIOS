@@ -15,6 +15,7 @@ struct ListView: View {
     @Binding var inventory: [Item] // Bind the inventory to allow selecting items
 
     @State private var listToEdit: ItemList? = nil
+    @Binding var selectedUnit: WeightUnit
     
     var body: some View {
         NavigationView {
@@ -33,7 +34,11 @@ struct ListView: View {
                         }) {
                             ForEach(list.items.indices, id: \.self) { itemIndex in
                                 let item = list.items[itemIndex]
-                                Text("\(item.name) - \(formattedWeight(item.weight))kg")
+                                Text("\(item.name) - \(formattedWeight(item.weight))\(selectedUnit)")
+                            }
+                            let totalWeight = list.items.reduce(0.0) { $0 + selectedUnit.convert(weight: $1.weight, to: selectedUnit) }
+                            Section() {
+                                Text("Total Weight: \(String(format: "%.2f", totalWeight))\(selectedUnit.rawValue)")
                             }
                         }
                     }
@@ -60,7 +65,7 @@ struct ListView: View {
         if weight.truncatingRemainder(dividingBy: 1) == 0 {
             return String(format: "%.0f", weight)
         } else {
-            return String(format: "%.1f", weight)
+            return String(format: "%.2f", weight)
         }
     }
 }

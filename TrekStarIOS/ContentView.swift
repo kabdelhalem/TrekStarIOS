@@ -19,7 +19,7 @@ struct ContentView: View {
                     Label("Inventory", systemImage: "archivebox")
                 }
             
-            ListView(lists: $lists, inventory: $inventory)
+            ListView(lists: $lists, inventory: $inventory, selectedUnit: $selectedUnit)
                 .tabItem {
                     Label("Lists", systemImage: "list.bullet")
                 }
