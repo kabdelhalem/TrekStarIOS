@@ -11,16 +11,11 @@ Features
 	•	Add New Gear: Quickly add new items to your inventory, specifying details like weight, category, and quantity.
 	•	Seamless List Management: Add or remove gear from lists directly from your inventory.
 
-Screenshots
-
-Include screenshots of the app in action here to visually showcase your app.
-
 Tech Stack
 
 	•	Swift: Main programming language for iOS app development.
 	•	SwiftUI: Used for building the user interface with declarative syntax.
 	•	Xcode: Integrated Development Environment (IDE) for iOS app development.
-	•	MapKit and AVFoundation: Optional frameworks if you have integrated features for location tracking or audio-visual components.
 
 Installation
 
