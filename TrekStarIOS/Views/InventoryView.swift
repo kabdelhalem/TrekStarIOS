@@ -25,12 +25,14 @@ struct InventoryView: View {
                     Section(header: Text(category.rawValue)) {
                         let categoryItems = inventory.filter { $0.category == category.rawValue }
                         ForEach(categoryItems.indices, id: \.self) { index in
-                            let item = $inventory[index] // Use Binding for each item
+                            let item = categoryItems[index] // Use Binding for each item
                             HStack {
-                                Text("\(item.wrappedValue.name) - \(formattedWeight(item.wrappedValue.weight))kg") // Access item using wrappedValue
+                                Text("\(item.name) - \(formattedWeight(item.weight))kg") // Access item using wrappedValue
                                 Spacer()
                                 Button("Edit") {
-                                    itemToEdit = item.wrappedValue // Set the selected item to edit
+                                    if let inventoryIndex = inventory.firstIndex(where: {$0.id == item.id}){
+                                        itemToEdit = inventory[inventoryIndex]
+                                    }
                                 }
                             }
                         }
