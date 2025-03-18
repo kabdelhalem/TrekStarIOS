@@ -1,6 +1,8 @@
-TrekStar - Your Ultimate Backpacking Companion
+# [TrekStar](https//www.trekstar.kareems.space) - Your Ultimate Backpacking Companion
 
 TrekStar helps you stay organized and prepared for all your backpacking adventures. Whether you’re packing for a short hike or a multi-day trek, this iOS app simplifies the process of tracking your gear, managing packing lists, and managing item weights – now with support for switching between kilograms and pounds!
+
+## TrekStar is now Available on the App Store!
 
 Features
 
